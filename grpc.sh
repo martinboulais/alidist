@@ -39,7 +39,7 @@ echo "OPENSSL_REVISION: $OPENSSL_REVISION"
 export OPENSSL_ROOT_DIR=$OPENSSL_ROOT
 
 cmake $SOURCEDIR                                    \
-  -G Ninja 					    \
+  -G Ninja 					                                \
   ${CXXSTD:+-DCMAKE_CXX_STANDARD=$CXXSTD}           \
   -DCMAKE_INSTALL_PREFIX=$INSTALLROOT               \
   -DgRPC_PROTOBUF_PACKAGE_TYPE="CONFIG"             \
@@ -54,7 +54,7 @@ cmake $SOURCEDIR                                    \
   -DgRPC_BUILD_GRPC_CSHARP_PLUGIN=OFF               \
   -DgRPC_BUILD_GRPC_NODE_PLUGIN=OFF                 \
   -DgRPC_BUILD_GRPC_OBJECTIVE_C_PLUGIN=OFF          \
-  -DgRPC_BUILD_GRPC_PHP_PLUGIN=OFF 		    \
+  -DgRPC_BUILD_GRPC_PHP_PLUGIN=OFF          		    \
   -DgRPC_BUILD_GRPC_CPP_PLUGIN=ON                   \
   -DgRPC_BUILD_CSHARP_EXT=OFF                       \
   -DgRPC_RE2_PROVIDER=package                       \
